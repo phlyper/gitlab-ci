@@ -25,6 +25,7 @@ RUN docker-php-ext-configure gd
     
 # Install the php xdebug extension
 RUN pecl install xdebug && docker-php-ext-configure xdebug
+# COPY ./xdebug.ini /user/local/ect/php/conf.d/xdebug.ini
 
 # Install ZIP
 RUN pecl install zip && docker-php-ext-enable zip
